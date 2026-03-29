@@ -25,7 +25,7 @@ const Home = ({ active, isBack }) => {
                         <h3 className="hello">Hello, I am <span className="name">Mageshwaran S</span></h3>
                         <h3 className="my-profession">I' m a <span className="typing" ref={el}></span></h3>
                         <p>"I'm passionate about building real-world software solution"</p>
-                        <a href="/documents/S.Mageshwaran.pdf" download="S.Mageshwaran_CV.pdf" className="btn">Download CV</a>
+                        <a href="/documents/MAX Resume.pdf" download="MAX Resume.pdf" className="btn">Download CV</a>
                     </div>
                     <div className="home-img">
                         <img src="/images/profile pic.jpeg" alt="Profile" />
