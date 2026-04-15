@@ -1,6 +1,33 @@
 import React from 'react';
 
 const About = ({ active, isBack, setActiveSection }) => {
+    const skills = [
+        { name: 'HTML5', percent: 96 },
+        { name: 'CSS3', percent: 86 },
+        { name: 'JS', percent: 76 },
+        { name: 'Python', percent: 60 },
+        { name: 'Django', percent: 30 },
+        { name: 'OOPS', percent: 70 },
+        { name: 'Bootstrap', percent: 70 },
+        { name: 'Tailwind', percent: 40 },
+        { name: 'ReactJS', percent: 70 },
+        { name: 'NodeJS', percent: 30 },
+        { name: 'React Native', percent: 30 },
+        { name: 'SASS', percent: 80 },
+        { name: 'Adobe Photoshop', percent: 70 },
+        { name: 'Adobe Illustrator', percent: 60 },
+        { name: 'Git & GitHub', percent: 70 },
+        { name: 'SQLite', percent: 50 },
+        { name: 'MySQL', percent: 66 },
+        { name: 'Strapi Backend Tool', percent: 70 },
+        { name: 'Supa Base', percent: 70 },
+        { name: 'IDE with AI', percent: 96 },
+        { name: 'Figma', percent: 80 },
+        { name: 'Flutter', percent: 60 },
+        { name: 'Dart', percent: 30 },
+        { name: 'Android Studio', percent: 64 }
+    ];
+
     return (
         <section className={`about section ${active ? 'active' : ''} ${isBack ? 'back-section' : ''}`} id="about">
             <div className="container">
@@ -92,74 +119,20 @@ const About = ({ active, isBack, setActiveSection }) => {
                         <div className="skills padd-15">
                             <h3 className="title">Skills</h3>
                             <div className="row">
-                                <div className="skill-item padd-15">
-                                    <h5>CSS</h5>
-                                    <div className="progress">
-                                        <div className="progress-in" style={{ width: '86%' }}></div>
-                                        <div className="skill-percent">86%</div>
+                                {skills.map((skill, index) => (
+                                    <div className="skill-item padd-15" key={index}>
+                                        <h5>{skill.name}</h5>
+                                        <div className="progress">
+                                            <div className="progress-in" style={{ width: `${skill.percent}%` }}></div>
+                                            <div className="skill-percent">{skill.percent}%</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="skill-item padd-15">
-                                    <h5>JS</h5>
-                                    <div className="progress">
-                                        <div className="progress-in" style={{ width: '76%' }}></div>
-                                        <div className="skill-percent">76%</div>
-                                    </div>
-                                </div>
-                                <div className="skill-item padd-15">
-                                    <h5>Python</h5>
-                                    <div className="progress">
-                                        <div className="progress-in" style={{ width: '40%' }}></div>
-                                        <div className="skill-percent">40%</div>
-                                    </div>
-                                </div>
-                                <div className="skill-item padd-15">
-                                    <h5>HTML</h5>
-                                    <div className="progress">
-                                        <div className="progress-in" style={{ width: '96%' }}></div>
-                                        <div className="skill-percent">96%</div>
-                                    </div>
-                                </div>
-                                <div className="skill-item padd-15">
-                                    <h5>Flutter</h5>
-                                    <div className="progress">
-                                        <div className="progress-in" style={{ width: '60%' }}></div>
-                                        <div className="skill-percent">60%</div>
-                                    </div>
-                                </div>
-                                <div className="skill-item padd-15">
-                                    <h5>Dart</h5>
-                                    <div className="progress">
-                                        <div className="progress-in" style={{ width: '30%' }}></div>
-                                        <div className="skill-percent">30%</div>
-                                    </div>
-                                </div>
-                                <div className="skill-item padd-15">
-                                    <h5>Figma</h5>
-                                    <div className="progress">
-                                        <div className="progress-in" style={{ width: '80%' }}></div>
-                                        <div className="skill-percent">80%</div>
-                                    </div>
-                                </div>
-                                <div className="skill-item padd-15">
-                                    <h5>Android Studio</h5>
-                                    <div className="progress">
-                                        <div className="progress-in" style={{ width: '64%' }}></div>
-                                        <div className="skill-percent">64%</div>
-                                    </div>
-                                </div>
-                                <div className="skill-item padd-15">
-                                    <h5>MySQL</h5>
-                                    <div className="progress">
-                                        <div className="progress-in" style={{ width: '66%' }}></div>
-                                        <div className="skill-percent">66%</div>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                         <div className="row">
                             <div className="experience padd-15">
-                                <h3 className="title">Experience</h3>
+                                <h3 className="title">Intern Experience</h3>
                                 <div className="row">
                                     <div className="timeline-box padd-15">
                                         <div className="timeline shadow-dark">
