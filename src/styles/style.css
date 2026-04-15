@@ -557,12 +557,39 @@ h3.my-profession {
 }
 
 .about .experience {
-  flex: 0 0 100%;
-  max-width: 100%;
+  flex: 0 0 50%;
+  max-width: 50%;
   margin-top: 30px;
   padding-left: 30px;
   /* Extra padding for visual gap */
   padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about .experience .row {
+  flex: 1;
+  display: flex;
+}
+
+.about .experience .timeline-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.about .experience .timeline {
+  flex: 1;
+}
+
+.about .experience .timeline::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background-color: var(--skin-color);
+  top: 30px;
+  bottom: 30px;
+  left: 22px;
 }
 
 .about h3.title {
